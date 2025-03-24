@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Survey</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #description {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        #survey-form {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="number"], 
+        select, 
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="radio"], 
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 600px) {
+            #survey-form {
+                padding: 15px;
+            }
+
+            button {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">My Survey Net</h1>
+    <p id="description">Welcome to this platform. Please fill out this survey for my research work.</p>
+
+    <form id="survey-form">
+
+        <label for="name" id="name-label">Name: 
+            <input id="name" type="text" placeholder="Full Name" required/>
+        </label>
+
+        <label for="email" id="email-label">Email: 
+            <input type="email" id="email" placeholder="Email" required/> 
+        </label>
+
+        <label for="age" id="number-label">Age: 
+            <input type="number" id="number" max="100" min="16" placeholder="Age" /> 
+        </label>
+
+        <label for="dropdown">What is your role: 
+            <select id="dropdown">
+                <option value="" disabled selected>Click to select</option>
+                <option>Student</option>
+                <option>Teacher</option>
+                <option>Other</option>
+            </select>
+        </label>
+
+        <label for="gender">Gender:</label>
+        <div>
+            <input type="radio" name="gender" value="male" id="male"> 
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female"> 
+            <label for="female">Female</label>
+        </div>
+
+        <p>Which tools are you an expert in:</p>
+        <div>
+            <input type="checkbox" value="HTML" id="html"> 
+            <label for="html">HTML</label>
+            <input type="checkbox" value="CSS" id="css"> 
+            <label for="css">CSS</label>
+            <input type="checkbox" value="JavaScript" id="javascript"> 
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" value="React" id="react"> 
+            <label for="react">React</label>
+        </div>
+
+        <label for="comments">Add your comments:
+            <textarea id="comments" placeholder="Click to start typing" rows="4"></textarea>
+        </label>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
