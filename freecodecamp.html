@@ -5,74 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeCodeCamp Projects</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: #343a40;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            text-decoration: none;
-            color: #495057;
-            font-weight: bold;
-            padding: 10px;
-            display: inline-block;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 5px;
-        }
-        a:hover {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #343a40;
-            color: #ffffff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .search-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: 80%;
-            max-width: 400px;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-        }
-        .author {
-            font-size: 1.2em;
-            margin: 10px 0;
-            text-align: center;
-            color: #343a40;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    color: #495057;
+    font-weight: bold;
+    display: block; /* Full clickable area */
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #343a40;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.search-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.author {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: center;
+    color: #343a40;
+}
     </style>
     <script>
         function searchProjects() {
@@ -116,7 +143,7 @@
         <li class="project-item"><a href="cat_painting.html">Cat Painting</a> - A cat painting, designed using absolute positioning, the z-index property, and the transform property in CSS.</li>
         <li class="project-item"><a href="piano.html">Piano</a> - A piano made using media queries and pseudo selectors.</li>
         <li class="project-item"><a href="technical_documentation.html">Technical Documentation</a> - A JavaScript Technical Documentation Page.</li>
-
+        <li class="project-item"><a href="city_skyline.html">City Sky Line</a> - A City Skyline design mad using CSS variables.</li>
     </ul>
 </div>
 
