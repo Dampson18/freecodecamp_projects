@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Product Landing Page">
+  <meta name="author" content="Kelvin Dampson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <style>
+/* Global Styles  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  background-image: url('landing_bg.jpg');
+}
+
+/* Header */
+#header {
+  margin-top: 60px;
+  padding: 15px;
+  display: flex; /* To align logo and potentially other header elements */
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center; /* Center the logo vertically */
+}
+
+#header-img {
+  max-width: 150px;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below inline images */
+}
+
+
+
+
+/* Navigation Bar  */
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #C70039; 
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  gap: 20px;
+
+}
+
+#nav-bar ul img{
+
+height: 30px;
+width: 30px;
+position: absolute;
+left: 100px;
+}
+
+
+#nav-bar a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav-bar a:hover {
+  background-color: #d97812;
+}
+
+/* Subscription Form (as before) */
+#form {
+  margin: 30px auto;
+  max-width: 500px;
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#email {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#submit {
+  width: 100%;
+  background-color: #f28715;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submit:hover {
+  background-color: #d97812;
+}
+
+/* Features Section (as before) */
+.features {
+  padding: 50px;
+  background: #fff;
+  margin: 30px auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 90%;
+}
+
+.feature-list {
+  text-align: left;
+  margin-top: 15px;
+  
+  
+}
+
+.feature-list li {
+  padding: 12px 0;
+  font-size: 20px;
+  line-height: 1.6;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  list-style-type: none;
+  border-left: 2px solid green;
+  font-family: cursive, verdana;
+  border-right: 2px solid green;
+  &:hover{
+  background-color: #f3815a;
+  }
+  
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+/* How It Works (as before) */
+.how_it_works {
+  padding: 50px;
+  background: #e9ecef;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto 0;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* Pricing Section */
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+.pricing h2{
+color: #da7c2e;
+background-color: white;
+height: 35px;
+padding: 3px;
+margin: 1px;
+border-radius: 2px;
+}
+.pricing-box {
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 300px;
+  border: 1px solid #ddd;
+}
+
+.pricing-box h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #f28715;
+}
+
+.pricing-box p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.buy-button {
+  display: block;
+  width: 80%;
+  margin: 15px auto 0;
+  background-color: #f28715;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #d97812;
+}
+
+/* Footer  */
+#footer {
+  padding: 15px;
+  background-color: #C70039;
+  color: white;
+  font-size: 15px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Media Query (as before) */
+@media (max-width: 768px) {
+  #nav-bar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+
+<body>
+<header id="header">
+  <img id="header-img" src="umbrella.png" alt="Product Logo">
+  <nav id="nav-bar">
+    <ul>
+	<li><img id="header-img" src="umbrella.png" alt="Product Logo"></li>
+      <li><a class="nav-link" href="#features">Features</a></li>
+      <li><a class="nav-link" href="#how_it_works">How It Works</a></li>
+      <li><a class="nav-link" href="#pricing">Pricing</a></li>
+    </ul>
+  </nav>
+</header>
+
+<form id="form" action="https://www.freecodecamp.com/email-submit">
+  <input type="email" id="email" name="email" placeholder="Enter your valid email" required>
+  <input type="submit" id="submit" value="Subscribe">
+</form>
+
+<div class="features" id="features">
+  <h2>Features</h2>
+  <ul class="feature-list">
+    <li>Durable materials for long-lasting use.</li>
+    <li>Compact design for easy portability.</li>
+    <li>Variety of colors and styles available.</li>
+    <li>Wind-resistant frame to withstand storms.</li>
+    <li>Ergonomic handle for comfortable grip.</li>
+  </ul>
+</div>
+
+<div class="how_it_works" id="how_it_works">
+  <h2>How It Works</h2>
+  <p>Simply choose your favorite umbrella, place an order online, and we will ship it directly to your doorstep!</p>
+  <iframe id="video" src="https://www.youtube.com/embed/example" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="pricing" id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing-box">
+    <h3>Classic Umbrella</h3>
+    <p>Price: $19.99</p>
+    <button class="buy-button">Buy</button>
+  </div>
+  <div class="pricing-box">
+    <h3>Travel Umbrella</h3>
+    <p>Price: $29.99</p>
+    <button class="buy-button">Buy</button>
+  </div>
+  <div class="pricing-box">
+    <h3>Deluxe Umbrella</h3>
+    <p>Price: $39.99</p>
+    <button class="buy-button">Buy</button>
+  </div>
+</div>
+
+<footer id="footer">
+  <p>&copy; 2025 Original Umbrellas. All rights reserved.</p>
+</footer>
+</body>
+</html>
